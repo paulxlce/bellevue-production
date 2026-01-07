@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bellevue | Contact</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo/bellevue_favicon_black_vector.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="nav">
+      <div class="brand">
+        <a href="index.html"><img src="assets/logo/bellevue_logo_black_vector.svg" alt="Bellevue logo"></a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html#presentation">Présentation</a>
+        <a href="index.html#work">Création vidéo</a>
+        <a href="pricing.html">Tarifs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn ghost" href="pricing.html">Voir les tarifs</a>
+        <a class="btn primary" href="contact.html">Planifier un appel</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section contact" id="contact">
+        <div class="contact-card reveal" style="--delay: 0s">
+          <div class="contact-info">
+            <p class="eyebrow">Contact</p>
+            <h2>Construisons votre prochain lancement.</h2>
+            <p class="lede">Partagez les détails du bien et vos objectifs. Réponse sous un jour ouvré.</p>
+            <div class="contact-list">
+              <div>
+                <p class="mini-label">Email</p>
+                <a href="mailto:hello@bellevue.studio">contact@bellevue-production.fr</a>
+              </div>
+              <div>
+                <p class="mini-label">Téléphone</p>
+                <a href="tel:+12065550123">+33 6 77 99 70 65 - +33 6 51 38 43 00</a>
+              </div>
+              <div>
+                <p class="mini-label">Studios</p>
+                <p class="mini-value">France · Europe · Remote</p>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xwvpgovk" method="POST">
+            <div class="input-row">
+              <label for="name">Nom complet</label>
+              <input id="name" name="name" type="text" placeholder="Votre nom" required>
+            </div>
+            <div class="input-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div class="input-row">
+              <label for="phone">Téléphone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+33 (0)6 .. .. .. ..">
+            </div>
+            <div class="input-row">
+              <label for="project">Type de projet</label>
+              <select id="project" name="project">
+                <option>Lancement de bien</option>
+                <option>Portfolio promoteur</option>
+                <option>Campagne réseaux sociaux</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="input-row">
+              <label for="message">Vos besoins</label>
+              <textarea id="message" name="message" rows="4" placeholder="Adresse, délais, objectifs..." required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="Demande de contact - Bellevue">
+            <input type="text" name="_gotcha" style="display:none">
+            <button class="btn primary full" type="submit">Envoyer</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <img src="assets/logo/bellevue_logo_black_vector.svg" alt="Bellevue wordmark">
+        <p>Du contenu sur-mesure pour les biens qui méritent l'attention.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#presentation">Présentation</a>
+        <a href="index.html#video">Création vidéo</a>
+        <a href="pricing.html">Tarifs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-meta">
+        <p>© 2025 Bellevue. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
