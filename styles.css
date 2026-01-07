@@ -285,6 +285,10 @@ a {
   margin-bottom: 10px;
 }
 
+.hero .eyebrow {
+  font-size: 1.05rem;
+}
+
 h1, h2, h3, h4 {
   margin: 0;
   color: var(--ink);
@@ -493,15 +497,16 @@ h3 {
 }
 
 .mini-label {
-  color: var(--muted);
-  font-size: 0.9rem;
-  margin: 0 0 4px;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 6px;
 }
 
 .mini-value {
   margin: 0;
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .section {
@@ -851,15 +856,7 @@ h3 {
 }
 
 .play-overlay {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: 28px;
-  color: #fff;
-  pointer-events: none;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  opacity: 0.9;
+  display: none;
 }
 
 .work-media.playing .play-overlay {
@@ -869,13 +866,15 @@ h3 {
 }
 
 .clients {
-  padding: 30px 0 10px;
+  padding: 90px 0 30px;
 }
 
 .clients-title {
   text-align: center;
-  margin: 0 0 10px;
+  margin: 0 0 30px;
   color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
 .clients-wrap {
@@ -903,7 +902,7 @@ h3 {
 }
 
 .trust-reviews {
-  margin-top: 18px;
+  margin-top: 54px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 12px;
@@ -1039,6 +1038,11 @@ h3 {
   font-size: 0.95rem;
 }
 
+#method .section-heading .eyebrow,
+#work .section-heading .eyebrow {
+  font-size: 1rem;
+}
+
 .tier-row {
   display: flex;
   gap: 22px;
@@ -1109,7 +1113,10 @@ h3 {
 .price-head--accent {
   position: relative;
   overflow: hidden;
-  padding: 16px 14px 18px;
+  padding: 12px 14px 22px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
 }
 
 .price-head--accent::before {
@@ -1118,7 +1125,7 @@ h3 {
   left: 0;
   right: 0;
   top: 0;
-  height: 46px;
+  height: 48px;
   border-radius: 12px 12px 0 0;
   background: var(--blue);
   opacity: 0.85;
@@ -1130,9 +1137,25 @@ h3 {
   z-index: 1;
 }
 
+.price-head.price-head--accent + .price {
+  margin-top: 24px;
+}
+
+.price-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 42px 14px 40px;
+  min-height: 230px;
+  background: color-mix(in srgb, var(--surface) 94%, #eef2f0 6%);
+  border-radius: 0 0 12px 12px;
+}
+
 .price-tag {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 900;
   letter-spacing: 0.012em;
   color: var(--ink);
@@ -1200,30 +1223,112 @@ h3 {
 }
 
 .contact {
-  margin: 70px 0 30px;
+  margin: 50px 0 30px;
+}
+
+.contact-intro {
+  text-align: left;
+  max-width: 100%;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .contact-card {
   background: var(--surface-elevated);
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 28px;
+  padding: 26px;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 20px;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 24px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.08);
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-content: stretch;
+  width: 100%;
+  max-width: 400px;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .contact-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 0;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-location {
+  margin-top: auto;
+  padding-top: 18px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--blue);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--blue) 8%, #fff 92%);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--blue);
+  text-decoration: none;
+  line-height: 1.35;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+.phone-buttons {
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  margin-top: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.phone-buttons a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  flex: 1 1 200px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.phone-buttons a span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.01em;
 }
 
 .contact-form {
   display: grid;
   gap: 12px;
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 .input-row {
@@ -1304,10 +1409,18 @@ h3 {
 
 @media (max-width: 960px) {
   .nav {
+    position: sticky;
+    top: 0;
+    z-index: 30;
     flex-direction: column;
     align-items: stretch;
     padding: 14px 16px;
     gap: 16px;
+    border-radius: 0;
+    margin-top: 0;
+    background: color-mix(in srgb, var(--surface) 96%, rgba(255, 255, 255, 0.7) 4%);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
   }
 
   .nav .brand {
@@ -1346,12 +1459,6 @@ h3 {
     flex: 0 0 48px;
     width: 48px;
     height: 48px;
-  }
-
-  .nav {
-    position: relative;
-    flex-wrap: wrap;
-    gap: 10px;
   }
 
   .nav-links {
