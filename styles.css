@@ -119,9 +119,26 @@ body[data-mobile="true"] .btn {
 body[data-mobile="true"] .card,
 body[data-mobile="true"] .price-card,
 body[data-mobile="true"] .options-card,
-body[data-mobile="true"] .review-card,
 body[data-mobile="true"] .contact-card {
   padding: 14px;
+}
+
+body[data-mobile="true"] .review-card {
+  padding: 10px;
+  border-radius: 12px;
+}
+
+body[data-mobile="true"] .review-card .quote {
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+
+body[data-mobile="true"] .review-card .quote-meta {
+  font-size: 0.8rem;
+}
+
+body[data-mobile="true"] .reviews {
+  gap: 10px;
 }
 
 body[data-mobile="true"] .contact-card,
@@ -300,7 +317,11 @@ body[data-mobile="true"] .work-wide .work-meta {
 
 body[data-mobile="true"] .hero-video {
   margin-top: 120px;
-  margin-bottom: 160px;
+  margin-bottom: 22px;
+}
+
+body[data-mobile="true"] .presentation .section-heading .lede {
+  margin-bottom: 48px;
 }
 
 body[data-mobile="true"] .clients {
