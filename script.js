@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#contact-form");
   const status = document.querySelector(".form-status");
   const logos = document.querySelectorAll(".theme-logo");
+  const navToggle = document.querySelector("#nav-toggle");
+  const navLinks = document.querySelectorAll(".nav-links a");
   const FORM_ENDPOINT = "https://formspree.io/f/xwvpgovk";
 
   if (form) {
@@ -71,7 +73,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Theme toggle removed
 
-  // Mobile preview toggle removed; responsive layout remains handled by CSS media queries.
+  const applyMobileMode = (mode) => {
+    document.body.setAttribute("data-mobile", mode ? "true" : "false");
+  };
+
+  const mobileQuery = window.matchMedia("(max-width: 960px)");
+  applyMobileMode(mobileQuery.matches);
+  mobileQuery.addEventListener("change", (event) => applyMobileMode(event.matches));
+
+  if (navToggle) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = document.body.getAttribute("data-menu") === "open";
+      document.body.setAttribute("data-menu", isOpen ? "" : "open");
+      navToggle.setAttribute("aria-expanded", String(!isOpen));
+    });
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      document.body.removeAttribute("data-menu");
+      if (navToggle) {
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
 
   // Toggle play overlay on videos
   document.querySelectorAll(".work-media").forEach((media) => {
