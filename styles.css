@@ -559,6 +559,14 @@ h3 {
   color: var(--ink);
 }
 
+.mobile-only {
+  display: none;
+}
+
+body[data-mobile="true"] .mobile-only {
+  display: block;
+}
+
 .hero-bullet {
   display: inline-flex;
   align-items: center;
