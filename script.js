@@ -82,6 +82,15 @@ document.addEventListener("DOMContentLoaded", () => {
   mobileQuery.addEventListener("change", (event) => applyMobileMode(event.matches));
 
   if (navToggle) {
+    navToggle.hidden = !mobileQuery.matches;
+  }
+  mobileQuery.addEventListener("change", (event) => {
+    if (navToggle) {
+      navToggle.hidden = !event.matches;
+    }
+  });
+
+  if (navToggle) {
     navToggle.addEventListener("click", () => {
       if (document.body.getAttribute("data-mobile") !== "true") {
         return;
