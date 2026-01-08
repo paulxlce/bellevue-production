@@ -83,6 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (navToggle) {
     navToggle.addEventListener("click", () => {
+      if (document.body.getAttribute("data-mobile") !== "true") {
+        return;
+      }
       const isOpen = document.body.getAttribute("data-menu") === "open";
       document.body.setAttribute("data-menu", isOpen ? "" : "open");
       navToggle.setAttribute("aria-expanded", String(!isOpen));
@@ -96,6 +99,15 @@ document.addEventListener("DOMContentLoaded", () => {
         navToggle.setAttribute("aria-expanded", "false");
       }
     });
+  });
+
+  window.addEventListener("resize", () => {
+    if (document.body.getAttribute("data-mobile") !== "true") {
+      document.body.removeAttribute("data-menu");
+      if (navToggle) {
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    }
   });
 
   // Toggle play overlay on videos
