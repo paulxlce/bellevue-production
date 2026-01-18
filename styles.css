@@ -1534,6 +1534,34 @@ body[data-mobile="true"] .mobile-only {
   text-decoration: underline;
 }
 
+.calendar {
+  margin: 50px 0 30px;
+}
+
+.calendar-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 26px;
+  display: grid;
+  gap: 24px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-intro {
+  text-align: left;
+  display: grid;
+  gap: 8px;
+}
+
+.calendar-embed #my-cal-inline-shootingvideo {
+  width: 100%;
+  min-height: 620px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
 .phone-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -1564,6 +1592,21 @@ body[data-mobile="true"] .mobile-only {
   gap: 12px;
   grid-column: 2;
   grid-row: 1 / span 2;
+}
+
+.contact-cta {
+  background: color-mix(in srgb, var(--surface) 92%, #f4f7fb 8%);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  margin-top: 24px;
+}
+
+.contact-cta h3 {
+  margin: 0;
 }
 
 .input-row {
@@ -1782,6 +1825,10 @@ body[data-mobile="true"] .mobile-only {
 
   .contact-card {
     grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .calendar-card {
     padding: 24px;
   }
 
