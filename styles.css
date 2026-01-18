@@ -273,23 +273,23 @@ body[data-mobile="true"][data-menu="open"] .nav-links {
   pointer-events: auto;
 }
 
-body[data-mobile="true"] .nav-links a[href$="pricing.html"],
-body[data-mobile="true"] .nav-links a[href$="contact.html"],
-body[data-mobile="true"] .nav-links a[href$="contact.html#contact"] {
+body[data-mobile="true"] .nav-links a[href$="pricing/"],
+body[data-mobile="true"] .nav-links a[href$="contact/"],
+body[data-mobile="true"] .nav-links a[href$="contact/#contact"] {
   padding: 12px 14px;
   border-radius: 16px;
   border: 2px solid var(--blue);
   font-weight: 700;
 }
 
-body[data-mobile="true"] .nav-links a[href$="pricing.html"] {
+body[data-mobile="true"] .nav-links a[href$="pricing/"] {
   background: #ffffff;
   color: var(--blue);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
 }
 
-body[data-mobile="true"] .nav-links a[href$="contact.html"],
-body[data-mobile="true"] .nav-links a[href$="contact.html#contact"] {
+body[data-mobile="true"] .nav-links a[href$="contact/"],
+body[data-mobile="true"] .nav-links a[href$="contact/#contact"] {
   background: var(--blue);
   color: #ffffff;
   box-shadow: 0 10px 24px color-mix(in srgb, var(--blue) 35%, transparent);
@@ -1753,9 +1753,9 @@ body[data-mobile="true"] .mobile-only {
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
   }
 
-  .nav-links a[href$="pricing.html"],
+  .nav-links a[href$="pricing/"],
   .nav-links a[href^="#contact"],
-  .nav-links a[href$="contact.html"] {
+  .nav-links a[href$="contact/"] {
     display: block;
   }
 
