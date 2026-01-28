@@ -1609,6 +1609,23 @@ body[data-mobile="true"] .mobile-only {
   margin: 0;
 }
 
+.legal-card {
+  display: grid;
+  gap: 22px;
+}
+
+.legal-block {
+  display: grid;
+  gap: 8px;
+}
+
+.legal-date {
+  font-variant-numeric: normal;
+  font-variant-ligatures: none;
+  font-feature-settings: "frac" 0, "liga" 0, "calt" 0, "dlig" 0, "rlig" 0 !important;
+  font-kerning: none;
+}
+
 .input-row {
   display: grid;
   gap: 6px;
